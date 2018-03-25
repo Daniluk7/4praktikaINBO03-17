@@ -1,0 +1,39 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+template<typename T>
+void calc(int n, char c, int m){
+switch (c) 
+       {
+          case'+':cout<<n<<c<<m<<" = "<<(n+m)<<endl; break;
+          case'-': cout<<n<<c<<m<<" = "<<(n-m)<<endl;break; 
+          case'/': cout<<n<<c<<m<<" = "<<(n/m)<<endl; break; 
+          case'*': cout<<n<<c<<m<<" = "<<(n*m)<<endl;break;
+          default: cout<<"Òàêîé îïåðàöèè íåò"<< endl;
+         }
+}
+void calc(float n, char c, float m){
+switch (c) 
+       {
+          case'+':cout<<n<<c<<m<<" = "<<(n+m)<<endl; break;
+          case'-': cout<<n<<c<<m<<" = "<<(n-m)<<endl;break; 
+          case'/': cout<<n<<c<<m<<" = "<<(n/m)<<endl; break; 
+          case'*': cout<<n<<c<<m<<" = "<<(n*m)<<endl;break;
+          default: cout<<"Òàêîé îïåðàöèè íåò"<< endl;
+         }
+}
+int main(){ 
+setlocale(0,"");
+    char a; 
+    float c,b;
+    cout<<"Ââåäèòå 1 ÷èñëî: \n";
+       cin>>c;
+    cout<<"Ââåäèòå çíàê îïåðàöèè: \n";
+       cin>>a;
+    cout<<"Ââåäèòå 2 ÷èñëî:\n";
+       cin>>b;
+    calc(c, a, b);
+ 
+    return 0;
+}
